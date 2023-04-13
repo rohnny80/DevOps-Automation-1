@@ -41,7 +41,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-					<execution>
+
 						<goals>
 							<goal>build-info</goal>
 						</goals>
