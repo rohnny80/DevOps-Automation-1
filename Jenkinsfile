@@ -14,18 +14,18 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t suresh394/kubernetes .'
+                    sh 'docker build -t rohnny80/kubernetes .'
                 }
             }
         }
         stage('Push image to hub'){
             steps{
                 script{
-                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
-                    sh 'docker login -u suresh394 -p ${dockerhubpwd}'
+                    withCredentials([string(credentialsId: 'Passmexx12', variable: 'Passmexx12')]) {
+                    sh 'docker login -u rohnny80 -p ${Passmexx12}'
                         
                     }
-                    sh 'docker push suresh394/kubernetes'
+                    sh 'docker push rohnny80/kubernetes'
                 }
             }
         }
